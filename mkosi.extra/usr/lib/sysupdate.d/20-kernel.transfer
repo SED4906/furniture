@@ -1,0 +1,20 @@
+[Transfer]
+ProtectVersion=%A
+Verify=false
+
+[Target]
+Type=regular-file
+Path=/EFI/Linux
+PathRelativeTo=boot
+MatchPattern=furniture_@v+@l-@d.efi \
+             furniture_@v+@l.efi \
+             furniture_@v.efi
+Mode=0444
+TriesLeft=3
+TriesDone=0
+InstancesMax=2
+
+[Source]
+Type=url-file
+Path=http://furniture-update-server.lan/
+MatchPattern=furniture_@v.efi

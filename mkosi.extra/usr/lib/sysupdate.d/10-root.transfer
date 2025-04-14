@@ -1,0 +1,16 @@
+[Transfer]
+ProtectVersion=%A
+Verify=false
+
+[Target]
+Type=partition
+Path=auto
+MatchPattern=furniture_@v
+MatchPartitionType=root
+PartitionFlags=0
+ReadOnly=1
+
+[Source]
+Type=url-file
+Path=http://furniture-update-server.lan/
+MatchPattern=furniture_@v.root-%a.@u.raw

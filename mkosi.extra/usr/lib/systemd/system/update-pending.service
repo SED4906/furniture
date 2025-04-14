@@ -1,0 +1,9 @@
+[Unit]
+Description=Notify user of pending system update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/system-update-pending
+
+[Install]
+WantedBy=graphical.target
