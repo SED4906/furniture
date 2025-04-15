@@ -1,5 +1,5 @@
 #!/bin/sh
-systemctl enable sway@tty1.service
+systemctl enable niri@tty1.service
 systemctl enable flatpak-update.timer
 useradd -G input,wheel -d /home/user -M user
 systemctl mask tpm2.target

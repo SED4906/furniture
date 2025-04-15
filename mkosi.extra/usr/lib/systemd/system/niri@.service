@@ -1,5 +1,5 @@
 [Unit]
-Description=Sway on %I
+Description=Niri on %I
 After=systemd-user-sessions.service
 ConditionPathExists=/dev/tty0
 Wants=dbus.socket systemd-logind.service
@@ -10,7 +10,7 @@ After=getty@%i.service
 [Service]
 Type=simple
 WorkingDirectory=/home/user
-ExecStart=/usr/bin/sway
+ExecStart=/usr/bin/niri
 Restart=always
 User=user
 UtmpIdentifier=%I
@@ -20,7 +20,7 @@ TTYReset=yes
 TTYVHangup=yes
 TTYVTDisallocate=yes
 StandardInput=tty-fail
-PAMName=sway
+PAMName=niri
 
 [Install]
 WantedBy=graphical.target
