@@ -1,0 +1,2 @@
+#!/bin/sh
+systemd-run --machine=user@.host --user notify-send -t 5000 'Checking for system updates...'
